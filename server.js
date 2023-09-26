@@ -6,6 +6,7 @@ var cors = require('cors');
 
 // bruker express server (skriv "npm i express" for å installere og "node server.js" for å kjøre, i terminalen)
 var app = express();
+
 var transactions = require('./data/transactions.json')
 
 // åpner sikkerhetssperre ved bruk av cors
