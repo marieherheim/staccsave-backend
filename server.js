@@ -12,9 +12,14 @@ var transactions = require('./data/transactions.json')
 // åpner sikkerhetssperre ved bruk av cors
 app.use(cors())
 
+
+app.get('/', function (req, res) {
+    res.send(JSON.stringify(transactions));
+    })
+
 // sender fra datasettet transactions.json til frontend
 app.get('/amount', function (req, res) {
-    res.send(JSON.stringify(amount));
+    res.send(JSON.stringify(transactions));
 })
 
 var server = app.listen(8081, function () {
